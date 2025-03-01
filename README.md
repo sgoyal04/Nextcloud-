@@ -24,3 +24,8 @@ A file sharing server for personal cloud solution.
 5. Enter the password you created during Raspberry Pi OS installation.
 6. Update the OS using command: sudo apt update && apt upgrade.
    
+#Optional - Set up Portainer, Docker and Shell in a box (for better organisation and access)
+1. Install docker :- curl -sSL https://get.docker.com | sh
+2. Add user to docker group :- sudo usermod -aG docker {username}
+3. Install Portainer by following the deployment steps from the link :- https://docs.portainer.io/start/install-ce/server/docker/linux
+4. Install Shell in a box :- sudo apt install shellinabox
