@@ -1,5 +1,5 @@
 # Nextcloud 
-A file sharing server for personal cloud solution.
+A guide to setup nextcloud including initial raspberry pi setup.
 
 # Hardware requirement:
 1. Raspberry Pi
@@ -24,7 +24,7 @@ A file sharing server for personal cloud solution.
 5. Enter the password you created during Raspberry Pi OS installation.
 6. Update the OS using command: sudo apt update && apt upgrade.
    
-#Optional - Set up Portainer, Docker and Shell in a box (for better organisation and access)
+# Optional - Set up Portainer, Docker and Shell in a box (for better organisation and access)
 1. Install docker :- curl -sSL https://get.docker.com | sh
 2. Add user to docker group :- sudo usermod -aG docker {username}
 3. Install Portainer by following the deployment steps from the link :- https://docs.portainer.io/start/install-ce/server/docker/linux
