@@ -1,31 +1,32 @@
-# Nextcloud 
-A guide to setup nextcloud including initial raspberry pi setup.
+# Nextcloud Setup Guide
+A comprehensive guide to setting up Nextcloud, including the initial Raspberry Pi setup.
 
-# Hardware requirement:
+## Hardware Requirements
 1. Raspberry Pi
-3. Computer
-5. SD Card / USB / Hard disk / SSD ( will refer as storage )
+2. Computer
+3. SD Card / USB / Hard Disk / SSD (referred to as storage)
 
-# Initial setup for Pi:
-## Installing Raspberry OS on external storage using computer:
-1. Download and install Raspberry Pi Imager from: https://www.raspberrypi.com/software/ 
-2. Open Raspberry pi imager and choose your device, OS and storage and click next.
-3. Select edit settings from the pop up window. (If you would like to configure your OS settings)
-4. In general, set username and password and wifi.
-5. In services, enable ssh and select use password authentication.
-6. Apply the OS customization and select yes to erase data on the external storage.
-7. eject the drive and connect your drive to the Raspberry Pi.
+## Initial Setup for Raspberry Pi
 
-## Access the Raspberry Pi using SSH:
-1. You can find the IP address of the pi from router settings.
-2. Now use terminal to access raspberry using ssh and Ip address of the Pi
-3. Terminal command: ssh pi_name@pi_ip_address
-4. Say yes to want to continue connecting.
-5. Enter the password you created during Raspberry Pi OS installation.
-6. Update the OS using command: sudo apt update && apt upgrade.
-   
-## Optional - Set up Portainer, Docker and Shell in a box (for better organisation and access)
-1. Install docker :- curl -sSL https://get.docker.com | sh
-2. Add user to docker group :- sudo usermod -aG docker {username}
-3. Install Portainer by following the deployment steps from the link :- https://docs.portainer.io/start/install-ce/server/docker/linux
-4. Install Shell in a box :- sudo apt install shellinabox
+### Installing Raspberry Pi OS on External Storage
+1. Download and install the [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
+2. Open Raspberry Pi Imager, choose your device, OS, and storage, then click "Next".
+3. Select "Edit settings" from the pop-up window to configure your OS settings.
+4. In the "General" tab, set your username, password, and Wi-Fi settings.
+5. In the "Services" tab, enable SSH and select "Use password authentication".
+6. Apply the OS customization and confirm to erase data on the external storage.
+7. Eject the drive and connect it to your Raspberry Pi.
+
+### Accessing the Raspberry Pi via SSH
+1. Find the IP address of the Raspberry Pi from your router settings.
+2. Use a terminal to access the Raspberry Pi using SSH and its IP address.
+3. Terminal command: `ssh pi_name@pi_ip_address`
+4. Confirm the connection by typing "yes" when prompted.
+5. Enter the password you created during the Raspberry Pi OS installation.
+6. Update the OS using the command: `sudo apt update && sudo apt upgrade`.
+
+### Optional - Setting Up Portainer, Docker, and Shell in a Box
+1. Install Docker: `curl -sSL https://get.docker.com | sh`
+2. Add user to the Docker group: `sudo usermod -aG docker {username}`
+3. Install Portainer by following the [deployment steps](https://docs.portainer.io/start/install-ce/server/docker/linux).
+4. Install Shell in a Box: `sudo apt install shellinabox`
