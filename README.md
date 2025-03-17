@@ -25,8 +25,24 @@ A comprehensive guide to setting up Nextcloud, including the initial Raspberry P
 5. Enter the password you created during the Raspberry Pi OS installation.
 6. Update the OS using the command: `sudo apt update && sudo apt upgrade`.
 
-### Optional - Setting Up Portainer, Docker, and Shell in a Box
+### Set Up Docker, and Shell in a Box
 1. Install Docker: `curl -sSL https://get.docker.com | sh`
 2. Add user to the Docker group: `sudo usermod -aG docker {username}`
-3. Install Portainer by following the [deployment steps](https://docs.portainer.io/start/install-ce/server/docker/linux).
-4. Install Shell in a Box: `sudo apt install shellinabox`
+3. Install Shell in a Box: `sudo apt install shellinabox`
+   
+### Intall and setup portainer
+1. Install Portainer by following the [deployment steps](https://docs.portainer.io/start/install-ce/server/docker/linux).
+2. Open portainer using ip address of raspberry pi and port number that you used during earlier command.
+3. Go to Setting > App templates > URL and add the url : https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v3-arm64.json
+
+## Nextcloud Setup
+1. After adding this template url, go to templates and search for Nextcloud and select it.
+2. Create database password and MYSQL_ROOT_PASSWORD and select port number as 5443(can use some other port as well)
+3. Enter url as https:<ip_Address>:<port_number> to access nextcloud.
+4. Create a username and password of your choice.
+5. Select MySQL/MariaDB from storage and database, add nextcloud as database user and password same as step 2 database password, database name should be nextcloud_db and databasehost should be nextcloud_db:3306 (you can confirm port number from your portainer- got to containers and for nextcloud_db go to quick actions first option adn read through the page to find the port number)
+6. It is ready to use and you can go to files and create your own separate folder - to backup your computer files for example.
+7. Install nextcloud on your laptop and run it and add server address of the pi same url as step 3.
+8. You have to login using username and password you created during step 4.
+9. Now you can choose the folder/drive of your laptop you want to backup in nextcloud. All the contents of the selected folder will be in sync with nextcloud.
+10. You have succesffuly created your own private cloud storage to backup files from your laptop. 
