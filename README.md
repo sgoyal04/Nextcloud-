@@ -4,7 +4,7 @@ A comprehensive guide to setting up Nextcloud, including the initial Raspberry P
 ## Hardware Requirements
 1. Raspberry Pi
 2. Computer
-3. SD Card / USB / Hard Disk / SSD (referred to as storage)
+3. SD Card / USB / Hard Disk / SSD (willl refer to it as storage moving forward)
 
 ## Initial Setup for Raspberry Pi
 
