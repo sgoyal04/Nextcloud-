@@ -13,7 +13,7 @@ A comprehensive guide to setting up Nextcloud, including the initial Raspberry P
 2. Open Raspberry Pi Imager, choose your device, OS, and storage, then click "Next".
 3. Select "Edit settings" from the pop-up window to configure your OS settings.
 4. In the "General" tab, set your username, password, and Wi-Fi settings.
-5. In the "Services" tab, enable SSH and select "Use password authentication".
+5. In the "Services" tab, enable SSH and select "Use password authentication" because it is easier to manage with Shell in a box.
 6. Apply the OS customization and confirm to erase data on the external storage.
 7. Eject the drive and connect it to your Raspberry Pi.
 
