@@ -23,7 +23,7 @@ A comprehensive guide to setting up Nextcloud, including the initial Raspberry P
 3. Terminal command: `ssh pi_name@pi_ip_address`
 4. Confirm the connection by typing "yes" when prompted.
 5. Enter the password you created during the Raspberry Pi OS installation.
-6. Update the OS using the command: `sudo apt update && sudo apt upgrade`.
+6. Update the OS using the command: `sudo apt update && sudo apt upgrade -y`.
 
 ### Set Up Docker, and Shell in a Box
 1. Install Docker: `curl -sSL https://get.docker.com | sh`
