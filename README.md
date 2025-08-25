@@ -55,7 +55,8 @@ Since we are keeping this raspberry pi only on local network, the following shou
 ### Set Up Docker, and Shell in a Box
 1. Install Docker: `curl -sSL https://get.docker.com | sh`
 2. Add user to the Docker group: `sudo usermod -aG docker <username>`
-3. Install Shell in a Box: `sudo apt install shellinabox`
+3. Install Shell in a Box: `sudo apt install shellinabox`.
+4. Use the command: `sudo ufw allow from <subnet> to any port 4200 proto tcp` to enable shellinabox access from your subnet. By default ssh uses port 4200, to confirm use command: `sudo ss -tlnp | grep shellinabox`.
    
 ### Intall and setup portainer
 1. Install Portainer by following the [deployment steps](https://docs.portainer.io/start/install-ce/server/docker/linux).
