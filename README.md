@@ -25,6 +25,30 @@ A comprehensive guide to setting up Nextcloud, including the initial Raspberry P
 5. Enter the password you created during the Raspberry Pi OS installation.
 6. Update the OS using the command: `sudo apt update && sudo apt upgrade -y`.
 
+### Secure your raspberry pi
+Since we are keeping this raspberry pi only on local network, the following should be enough to keep it secure:
+#### Disable unnecessary services
+1. List all the services using the command: `systemctl list-unit-files --type=service`.
+2. Disable the services you will not be using, command: `sudo systemctl disable --now <service_name>`.
+#### Install Fail2Ban
+1. Install Fail2ban with the command: `sudo apt install fail2ban -y`.
+2. Setup the config file for Fail2ban to block brut force attempts to three (or more if you want).
+3. Navigate to the directory /etc/fail2ban/ using command: `cd /etc/fail2ban/jail.d`.
+4. You will find only one file inside this folder, named: `defeault-debians.conf`, we can edit this file with: `bantime=36000` and in next line write `maxretry=3`. You can change this numbers according to your requirement.
+5. Check if Fail2ban is running using command: `systemctl status fail2ban`.
+6. If you get server ready and active, you are good.
+7. Otherwise if you get an error: `Failed during configuration: Have not found any log file for sshd jail`, you need to install and rsyslog to create logs required for the Fail2ban.
+8. Use the command: `sudo apt install rsyslog -y` to intall rsyslog.
+9. Now enable this service using the command: `sudo systemctl enable rsyslog`.
+10. Now restart the Fail2ban using the command: `sudo systemctl restart fail2ban`.
+11. Try checking the status of Fail2Ban again and it should be running now and now your raspberry pi is secure against brut force attacks.
+#### Install UFW Firewall
+1. Use the command: `sudo apt-get install ufw-y`, to install ufw firewall.
+2. Block all incoming traffic using command: `sudo ufw defeault deny incoming`.
+3. Allow all outgoing traffic(letting pi connect to internet and download updates etc) using command: `sudo ufw default allow outgoing`.
+4. Allow connections using ssh through command: `sudo ufw allow ssh`.
+5. Finally, enable the firewall using command: `sudo ufw enable`.
+
 ### Set Up Docker, and Shell in a Box
 1. Install Docker: `curl -sSL https://get.docker.com | sh`
 2. Add user to the Docker group: `sudo usermod -aG docker {username}`
