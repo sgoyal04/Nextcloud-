@@ -50,7 +50,7 @@ Since we are keeping this raspberry pi only on local network, the following shou
 4. Allow connections using ssh through command: `sudo ufw allow ssh`.
 5. Finally, enable the firewall using command: `sudo ufw enable`.
 
-##Additional setup
+## Additional setup
 
 ### Set Up Docker, and Shell in a Box
 1. Install Docker: `curl -sSL https://get.docker.com | sh`
