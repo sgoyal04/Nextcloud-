@@ -73,4 +73,11 @@ Since we are keeping this raspberry pi only on local network, the following shou
 7. Install nextcloud on your laptop and run it and add server address of the pi same url as step 3.
 8. You have to login using username and password you created during step 4.
 9. Now you can choose the folder/drive of your laptop you want to backup in nextcloud. All the contents of the selected folder will be in sync with nextcloud.
-10. You have succesffuly created your own private cloud storage to backup files from your laptop. 
+10. You have succesffuly created your own private cloud storage to backup files from your laptop.
+
+### Use the following commands to remove docker and volume:
+1.`sudo docker stop nextcloud` - stop docker container. Replace nextcloud with your container name.
+2.`sudo docker rm nextcloud` - remove docker container.
+3.`sudo docker volume rm nextcloud` - remove volume.
+4. `sudo docker volume ls` - check if volume is removed.
+
