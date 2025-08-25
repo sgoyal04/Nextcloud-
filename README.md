@@ -25,7 +25,7 @@ A comprehensive guide to setting up Nextcloud, including the initial Raspberry P
 5. Enter the password you created during the Raspberry Pi OS installation.
 6. Update the OS using the command: `sudo apt update && sudo apt upgrade -y`.
 
-## Secure your raspberry pi
+## Secure your Raspberry Pi
 
 Since we are keeping this raspberry pi only on local network, the following should be enough to keep it secure:
 ### Disable unnecessary services
