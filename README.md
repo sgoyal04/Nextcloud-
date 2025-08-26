@@ -76,8 +76,9 @@ Since we are keeping this raspberry pi only on local network, the following shou
 10. You have succesffuly created your own private cloud storage to backup files from your laptop.
 
 ### Use the following commands to remove docker and volume:
-1.`sudo docker stop nextcloud` - stop docker container. Replace nextcloud with your container name.
-2.`sudo docker rm nextcloud` - remove docker container.
-3.`sudo docker volume rm nextcloud` - remove volume.
+1. `sudo docker stop nextcloud` - stop docker container. Replace nextcloud with your container name.
+2. `sudo docker rm nextcloud` - remove docker container.
+3. `sudo docker volume rm nextcloud` - remove volume.
 4. `sudo docker volume ls` - check if volume is removed.
-
+### Some other commands:
+1. To check if the ports used by an application: `sudo netstat -tulnp | grep docker`.
