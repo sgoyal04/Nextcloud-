@@ -66,7 +66,7 @@ Since we are keeping this raspberry pi only on local network, the following shou
 
 ## Nextcloud Setup
 1. After adding this template url, click on home, then go to templates and search for Nextcloud and select it.
-2. Create database password and MYSQL_ROOT_PASSWORD and select port number as 5443(can use some other port as well)
+2. Create database password and MYSQL_ROOT_PASSWORD and select port number as 5443(can use some other port as well) and click deploy the stack.
 3. Enter url as https:<ip_Address>:<port_number> to access nextcloud.
 4. Create a username and password of your choice.
 5. Select MySQL/MariaDB from storage and database, add nextcloud as database user and password same as step 2 database password, database name should be nextcloud_db and databasehost should be nextcloud_db:3306 (you can confirm port number from your portainer- got to containers and for nextcloud_db go to quick actions first option adn read through the page to find the port number)
