@@ -61,7 +61,8 @@ Since we are keeping this raspberry pi only on local network, the following shou
 ### Intall and setup portainer
 1. Install Portainer by following the [deployment steps](https://docs.portainer.io/start/install-ce/server/docker/linux).
 2. Open portainer using ip address of raspberry pi and port number that you used during earlier command.
-3. Go to Setting > App templates > URL and add the url : https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v3-arm64.json
+3. Create your account and login.
+4. Go to Setting > App templates > URL and add the url : https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v3-arm64.json
 
 ## Nextcloud Setup
 1. After adding this template url, go to templates and search for Nextcloud and select it.
