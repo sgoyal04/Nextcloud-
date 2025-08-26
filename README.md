@@ -65,7 +65,7 @@ Since we are keeping this raspberry pi only on local network, the following shou
 4. Go to Setting > App templates > URL and add the url : https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v3-arm64.json
 
 ## Nextcloud Setup
-1. After adding this template url, go to templates and search for Nextcloud and select it.
+1. After adding this template url, click on home, then go to templates and search for Nextcloud and select it.
 2. Create database password and MYSQL_ROOT_PASSWORD and select port number as 5443(can use some other port as well)
 3. Enter url as https:<ip_Address>:<port_number> to access nextcloud.
 4. Create a username and password of your choice.
