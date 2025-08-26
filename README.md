@@ -67,14 +67,15 @@ Since we are keeping this raspberry pi only on local network, the following shou
 ## Nextcloud Setup
 1. After adding this template url, click on home, then go to templates and search for Nextcloud and select it.
 2. Create database password and MYSQL_ROOT_PASSWORD and select port number as 5443(can use some other port as well) and click deploy the stack.
-3. Enter url as https:<ip_Address>:<port_number> to access nextcloud.
+3. Enter url as https://<ip_Address>:<port_number> to access nextcloud.
 4. Create a username and password of your choice.
 5. Select MySQL/MariaDB from storage and database, add nextcloud as database user and password same as step 2 database password, database name should be nextcloud_db and databasehost should be nextcloud_db:3306 (you can confirm port number from your portainer- got to containers and for nextcloud_db go to quick actions first option adn read through the page to find the port number)
-6. It is ready to use and you can go to files and create your own separate folder - to backup your computer files for example.
-7. Install nextcloud on your laptop and run it and add server address of the pi same url as step 3.
-8. You have to login using username and password you created during step 4.
-9. Now you can choose the folder/drive of your laptop you want to backup in nextcloud. All the contents of the selected folder will be in sync with nextcloud.
-10. You have succesffuly created your own private cloud storage to backup files from your laptop.
+6. Click install.
+7. It is ready to use and you can go to files and create your own separate folder - to backup your computer files for example.
+8. Install nextcloud on your laptop and run it and add server address of the pi same url as step 3.
+9. You have to login using username and password you created during step 4.
+10. Now you can choose the folder/drive of your laptop you want to backup in nextcloud. All the contents of the selected folder will be in sync with nextcloud.
+11. You have succesffuly created your own private cloud storage to backup files from your laptop.
 
 ### Use the following commands to remove docker and volume:
 1. `sudo docker stop nextcloud` - stop docker container. Replace nextcloud with your container name.
