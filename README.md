@@ -83,4 +83,4 @@ Since we are keeping this raspberry pi only on local network, the following shou
 3. `sudo docker volume rm nextcloud` - remove volume.
 4. `sudo docker volume ls` - check if volume is removed.
 ### Some other commands:
-1. To check if the ports used by an application: `sudo netstat -tulnp | grep docker`.
+1. To check the ports used by an application: `sudo netstat -tulnp | grep docker`.
